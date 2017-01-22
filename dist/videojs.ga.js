@@ -1,6 +1,6 @@
 /*
-* videojs-ga - v0.4.2 - 2015-02-06
-* Copyright (c) 2015 Michael Bensoussan
+* videojs-ga - v0.4.2 - 2017-01-20
+* Copyright (c) 2017 Michael Bensoussan
 * Licensed MIT
 */
 (function() {
@@ -45,7 +45,7 @@
           if (__indexOf.call(eventsToTrack, "start") >= 0 && percent === 0 && percentPlayed > 0) {
             sendbeacon('start', true);
           } else if (__indexOf.call(eventsToTrack, "percentsPlayed") >= 0 && percentPlayed !== 0) {
-            sendbeacon('percent played', true, percent);
+            sendbeacon('percent played', true, percentPlayedInterval);
           }
           if (percentPlayed > 0) {
             percentsAlreadyTracked.push(percent);
